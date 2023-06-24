@@ -1,7 +1,7 @@
 ---
 layout: title-page
-title: Jekyll Help
-apple_title: Jekyll Help
+title: Mastonaut Help
+apple_title: Mastonaut Help
 anchor: title-page
 menu_exclude: true
 robots: anchors
