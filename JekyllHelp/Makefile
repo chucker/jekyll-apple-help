@@ -14,5 +14,6 @@ $(HELP) : * **/*
 		LOCALE=$$(basename "$$LPROJ" .lproj) ; \
 		echo "Indexing: $$LPROJ" ; \
 		hiutil -1 -vv --create --anchors --locale=$$LOCALE --file "$$LPROJ/search.helpindex" "$$LPROJ" 2>&1 | \
+		hiutil -I corespotlight -1 -vv --create --anchors --locale=$$LOCALE --file "$$LPROJ/search.cshelpindex" "$$LPROJ" 2>&1 | \
 		awk "{ if (/error:/) {printf \"error: \" ; err = 1} else {printf \"warning: \"} ; print} END {exit err}" ; \
 	done
